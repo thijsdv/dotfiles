@@ -68,6 +68,13 @@ Plugin 'tpope/vim-commentary'
 " Easy motions
 Plugin 'easymotion/vim-easymotion'
 
+" Indentation lines
+Plugin 'Yggdroot/indentLine'
+
+" Clang format
+Plugin 'rhysd/vim-clang-format'
+let g:clang_format#detect_style_file = 1
+
 call vundle#end()            " required
 
 
@@ -194,6 +201,7 @@ imap jk <Esc>
 nmap <leader>w :w!<cr>
 nmap <leader>q :q!<cr>
 nmap <leader>a :A<cr>
+nmap <leader>y "+$"<cr>
 
 " Remap : to ; -> no need to use shift every time ---------------------------------------
 nnoremap ; :
@@ -251,3 +259,7 @@ if has("user_commands")
     command! -bang QA qa<bang>
     command! -bang Qa qa<bang>
 endif
+
+" Indentation
+let g:indentLine_char='|'
+
