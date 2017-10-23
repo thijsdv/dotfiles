@@ -101,8 +101,8 @@ set relativenumber  "Enable relative number counting - absolute line numbers sti
 " Tab settings --------------------------------------------------------------------------
 set autoindent      "Copy indent from the current line when starting a new line
 set expandtab       "Use spaces to insert a <Tab> - A tab can be inserted by using <C-V><Tab>
-set tabstop=4       "Number of spaces that a <Tab> in the file counts for
-set shiftwidth=4   "Test first if we can do without it
+set tabstop=2       "Number of spaces that a <Tab> in the file counts for
+set shiftwidth=2   "Test first if we can do without it
 
 " Interface settings --------------------------------------------------------------------
 "colorscheme moloki  "Set colorscheme - moloki is based on molokai with some minor changes
