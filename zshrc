@@ -3,9 +3,12 @@
 # ----------------------------------------------------------------
 export TERM="xterm-256color"
 export ZSH=/home/$USER/.oh-my-zsh
-export skye=/home/$USER/Documents/renson/skye/skye
-export vent=/home/$USER/Documents/renson/smart-fan/
-export PATH=/usr/lib64/qt-3.3/bin:/home/thijs/gcc-arm-none-eabi-4_9-2014q4/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/home/thijs/.local/bin:/home/thijs/bin:/home/thijs/Documents/renson/ventilator/esp-open-sdk/xtensa-lx106-elf/bin
+export skye=/home/$USER/Documents/projects/skye/skye
+export vent=/home/$USER/Documents/projects/smart-fan/
+export esp=/home/$USER/Documents/projects/esp8266-common/
+export iot=/home/$USER/Documents/projects/iot-platform-common/
+export hb3=/home/$USER/Documents/projects/healthbox3/
+export PATH=/usr/lib64/qt-3.3/bin:/home/$USER/gcc-arm-none-eabi-4_9-2014q4/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/home/$USER/.local/bin:/home/$USER/bin:/home/$USER/Documents/project/smart-fan/common/esp8266/tools/xtensa-lx106-elf/xtensa-lx106-elf/bin/
 
 # New window or tab -> check if shorter path name can be displayed
 if [ "$PWD/" = "$skye" ]; then
@@ -42,17 +45,11 @@ source $ZSH/oh-my-zsh.sh
 # Others
 # ----------------------------------------------------------------
 set bell-style none
-alias vim="stty stop '' -ixoff ; vim"
 # `Frozing' tty, so after any command terminal settings will be restored
 ttyctl -f
-# No ttyctl, so we need to save and then restore terminal settings
-vim()
-{
-    # osx users, use stty -g
-    local STTYOPTS="$(stty --save)"
-    stty stop '' -ixoff
-    command vimx "$@"
-    stty "$STTYOPTS"
-}
 
 alias glog="git log --graph --decorate --all --abbrev-commit"
+alias clean="./make.sh clean"
+alias mk="./make.sh"
+alias deploy="./make.sh deploy"
+alias mini="sudo minicom -D /dev/ttyUSB0"
