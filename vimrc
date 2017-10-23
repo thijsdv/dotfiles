@@ -56,7 +56,6 @@ Plugin 'vim-scripts/a.vim'
 
 " Colorscheme
 Plugin 'morhetz/gruvbox'
-Plugin 'airblade/vim-gitgutter'
 
 " Git
 Plugin 'tpope/vim-fugitive'
