@@ -72,6 +72,13 @@ Plugin 'Yggdroot/indentLine'
 
 " Clang format
 Plugin 'rhysd/vim-clang-format'
+
+Plugin 'ctrlpvim/ctrlp.vim'
+
+" Markdown, depends on tabular
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
+
 let g:clang_format#detect_style_file = 1
 
 call vundle#end()            " required
@@ -262,3 +269,8 @@ endif
 " Indentation
 let g:indentLine_char='|'
 
+" ctrlp ignores
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/](\.git|build|Doxygen|xtensa|doc)$',
+  \ 'file': '\v\.(d|o|elf|bin|hex)$',
+  \ }
