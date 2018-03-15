@@ -25,9 +25,9 @@ fi
 # Theme settings
 # ----------------------------------------------------------------
 ZSH_THEME="powerlevel9k/powerlevel9k"
-POWERLEVEL9K_MODE='awesome-fontconfig'
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(time)
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon dir vcs status)
+# POWERLEVEL9K_MODE='awesome-fontconfig'
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(time virtualenv)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs status)
 POWERLEVEL9K_STATUS_VERBOSE=false
 POWERLEVEL9K_TIME_FORMAT="%D{%H:%M:%S}"
 POWERLEVEL9K_STATUS_ERROR_BACKGROUND='red'
@@ -37,7 +37,7 @@ POWERLEVEL9K_STATUS_ERROR_FOREGROUND='black'
 # ----------------------------------------------------------------
 # Plugins
 # ----------------------------------------------------------------
-plugins=(git chucknorris zsh-notify)
+plugins=(git chucknorris zsh-notify virtualenv)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -53,3 +53,6 @@ alias clean="./make.sh clean"
 alias mk="./make.sh"
 alias deploy="./make.sh deploy"
 alias mini="sudo minicom -D /dev/ttyUSB0"
+
+eval `ssh-agent -s`
+ssh-add ~/.ssh/id_rsa
