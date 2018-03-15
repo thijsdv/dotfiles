@@ -99,8 +99,8 @@ set $workspace3 "3"
 set $workspace4 "4"
 set $workspace5 "5"
 set $workspace6 "6"
-set $workspace7 "7"
-set $workspace8 "8"
+set $workspace7 "7: "
+set $workspace8 "8: "
 set $workspace9 "9: "
 set $workspace10 "10: "
 
@@ -204,6 +204,8 @@ bindsym Mod4+p exec playerctl play-pause
 
 bindsym Mod4+l exec i3lock -c 000000
 bindsym $mod+ctrl+h move workspace to output left
+bindsym $mod+ctrl+j move workspace to output down
+bindsym $mod+ctrl+k move workspace to output up
 bindsym $mod+ctrl+l move workspace to output right
 
 bindsym $mod+d exec rofi -show run -lines 5 -eh 1 -width 40 -padding 20 -opacity "85" -bw 0 -bc "$bg-color" -bg "$bg-color" -fg "$text-color" -hlbg "$bg-color" -hlfg "#9575cd" -font "System San Francisco Display 18"
@@ -212,18 +214,22 @@ bindsym $mod+space exec rofi -show run -lines 5 -eh 1 -width 40 -padding 20 -opa
 exec_always feh --bg-scale wallpaper.jpg
 
 assign [class="Firefox"] $workspace2
+assign [class="Tusk"] $workspace7
+assign [class="hiri"] $workspace8
 assign [class="Skype"] $workspace9
 assign [class="Slack"] $workspace9
 assign [class="Spotify"] $workspace10
 for_window [class="Spotify"] move to workspace $workspace10
 
 exec --no-startup-id exec gnome-terminal
-exec --no-startup-id spotify
-exec --no-startup-id skype
-exec --no-startup-id slack
+exec --no-startup-id exec spotify
+exec --no-startup-id exec skypeforlinux
+exec --no-startup-id exec slack
 exec --no-startup-id exec firefox
-exec --no-startup-id nm-applet
-exec --no-startup-id volumeicon
+exec --no-startup-id exec hiri
+# exec --no-startup-id exec tusk-app
+exec --no-startup-id exec nm-applet
+exec --no-startup-id exec volumeicon
 
 exec_always xmodmap -e "clear lock" #disable caps lock switch
 exec_always xmodmap -e "keysym Caps_Lock = Escape" #set caps_lock as escape
