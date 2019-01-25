@@ -219,6 +219,9 @@ nnoremap <C-s> :w<CR>
 nnoremap <F1> :bp<CR>
 nnoremap <F2> :bn<CR>
 
+" Run ClangFormat
+nnoremap <C-C> :ClangFormat<CR>
+
 " Stamping
 nnoremap dr "_diwP
 
