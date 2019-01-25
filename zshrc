@@ -50,6 +50,7 @@ alias clean="./make.sh clean"
 alias mk="./make.sh"
 alias deploy="./make.sh deploy"
 alias mini="sudo minicom -D /dev/ttyUSB0"
+alias rid="./isy-academy-common/repo_support/docker/run_in_docker"
 
 eval `ssh-agent -s`
 ssh-add ~/.ssh/id_rsa
