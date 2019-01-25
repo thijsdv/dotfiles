@@ -4,6 +4,8 @@
 export TERM="xterm-256color"
 export ZSH=/home/$USER/.oh-my-zsh
 export PATH=/usr/lib64/qt-3.3/bin:/home/$USER/gcc-arm-none-eabi-4_9-2014q4/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/home/$USER/.local/bin:/home/$USER/bin:/home/$USER/Documents/project/smart-fan/common/esp8266/tools/xtensa-lx106-elf/xtensa-lx106-elf/bin/
+export site=/home/$USER/Documents/EmbeddedAcademyWebsite/EmbeddedAcademySite/
+export common=/home/$USER/Documents/courses/isy-academy-common/
 
 # New window or tab -> check if shorter path name can be displayed
 if [ "$PWD/" = "$skye" ]; then
