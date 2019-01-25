@@ -240,8 +240,6 @@ set foldlevel=99    "Open all folds when a new file is opened
 nnoremap zO zR
 nnoremap zC zM
 
-nnoremap ZZ :w<CR>
-
 " Jumping lands on middle of screen
 nnoremap n nzz
 nnoremap } }zz
