@@ -215,7 +215,6 @@ exec_always feh --bg-scale wallpapers/wallpaper_altran.jpg
 
 assign [class="Firefox"] $workspace2
 assign [class="Tusk"] $workspace7
-assign [class="hiri"] $workspace8
 assign [class="Skype"] $workspace9
 assign [class="Slack"] $workspace9
 assign [class="Spotify"] $workspace10
@@ -223,13 +222,14 @@ for_window [class="Spotify"] move to workspace $workspace10
 
 exec --no-startup-id exec gnome-terminal
 exec --no-startup-id exec spotify
-exec --no-startup-id exec skypeforlinux
 exec --no-startup-id exec slack
 exec --no-startup-id exec firefox
-exec --no-startup-id exec hiri
 # exec --no-startup-id exec tusk-app
 exec --no-startup-id exec nm-applet
 exec --no-startup-id exec volumeicon
 
 exec_always xmodmap -e "clear lock" #disable caps lock switch
 exec_always xmodmap -e "keysym Caps_Lock = Escape" #set caps_lock as escape
+
+workspace $workspace4 output HDMI-1
+assign [title="DS PDF Viewer - Audience Window"] $workspace4
